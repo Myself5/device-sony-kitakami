@@ -137,6 +137,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.dpc=false \
     ro.qti.sensors.wu=true
 
+ifeq ($(filter ivy,$(TARGET_DEVICE)),)
 ## 8MP Switch for ES
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.8mp.config=true
+endif
