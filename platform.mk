@@ -20,6 +20,11 @@ SOMC_PLATFORM := kitakami
 
 SONY_ROOT := device/sony/kitakami/rootdir
 
+# Audio
+PRODUCT_COPY_FILES += \
+  $(SONY_ROOT)/system/etc/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
+  $(SONY_ROOT)/system/etc/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
+
 # Media
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
