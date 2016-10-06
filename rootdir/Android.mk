@@ -49,5 +49,15 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := thermal-engine.conf
+LOCAL_SRC_FILES := vendor/etc/thermal-engine-$(TARGET_DEVICE).conf
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_STEM := thermal-engine
+LOCAL_MODULE_SUFFIX := .conf
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_ETC)
+include $(BUILD_PREBUILT)
+
 $(shell mkdir -p $(PRODUCT_OUT)/root && pushd $(PRODUCT_OUT)/root > /dev/null && ln -s fstab.kitakami fstab.$(TARGET_DEVICE) && popd > /dev/null)
 

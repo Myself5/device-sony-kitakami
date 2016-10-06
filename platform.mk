@@ -103,6 +103,10 @@ PRODUCT_PACKAGES += \
     brcm-uim-sysfs \
     libfmjni
 
+# Thermal
+PRODUCT_PACKAGES += \
+    thermal-engine.conf
+
 # RILD
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
